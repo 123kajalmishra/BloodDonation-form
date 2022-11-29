@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email id</title>
+    <link rel="stylesheet" href="fifth.css">
+
+    <script type="text/javascript">
+     
+      function validate(){
+        //here we get the all input elements where we want to apply regex 
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var number = document.getElementById('number').value;
+
+        //we used regex here for username,email address and phone number 
+        var usercheck = /^[a-zA-Z(\s).]{3,20}$/gm;
+        var emailcheck = /^[a-zA-Z0-9(@)(.)]{3,30}$/gm;
+        var numcheck = /^[789][0-9]{9,11}$/gm;
+        
+        //check username if condition is true then return(valid) if condition is false then return(invalid)
+        if(usercheck.test(username)){
+           document.getElementById('usererror').innerHTML = "**Username is valid**"
+        }
+        else{
+            document.getElementById('usererror').innerHTML = "**Username is invalid**";
+        }
+
+        //check email if condition is true then return(valid) if condition is false then return(invalid)
+        if(emailcheck.test(email)){
+            document.getElementById('emailcheck').innerHTML = "**Emial address is valid**";
+        }
+        else{
+            document.getElementById('emailcheck').innerHTML = "**Emial address is invalid**";
+        }
+
+        //check phone number if condition is true then return(valid) if condition is false then return(invalid)
+        if(numcheck.test(number)){
+          document.getElementById('textcheck').innerHTML = "**phone number is valid**";
+        }
+        else{
+          document.getElementById('textcheck').innerHTML = "**phone number is invalid**";
+        }
+      }
+    </script>
+</head>
+<body>
+  <!--************ STARTING OF THE CONTAINER************ -->
+  <div class="container">
+    <!-- this is heading of  the form -->
+    <h1>User Record List</h1>
+    <!--********* STARTING OF THE FORM HERE******** -->
+    <form action = "message.html">
+      <!-- label for username -->
+      <label for="">Username:</label><br>
+      <!-- we used inline css in username input -->
+      <input type="text" id="username" placeholder="Enter your username"  style="width:90%; margin-left: 5%; padding: 12px; font-size: 15px;" required><br>
+      <!-- we wrote error message here with red color -->
+      <span id="usererror" style="color: red;"></span><br>
+
+      <!--********* USERNMAE INPUT ENDED HERE********** -->
+
+      <!-- label for email address -->
+      <label for="">Email address:</label><br>
+      <!-- we used inline css for email address input -->
+      <input type="text" id="email" placeholder="enter email id"  style="width:90%; margin-left: 5%; padding: 12px; font-size: 15px;" required><br>
+      <!-- we wrote error message here with red color -->
+      <span id="emailcheck" style="color: red;"></span><br><br>
+
+      <!--******* EMAIL ADDRESS INPUT ENDED EHERE *******-->
+
+       <!-- label for phone number -->
+      <label for="">Enter your phone number:</label><br>
+      <!-- we used inline css for email address input -->
+      <input name="" id="number" placeholder="enter your phon number"  style="width:90%; margin-left: 5%; padding: 12px; font-size: 15px;" required></input><br>
+      <!-- we wrote error message here with red color -->
+      <span id="textcheck" style="color: red;"></span><br><br>
+
+      <!--******** PHONE NUMBER INPUT ENDED HERE********** -->
+
+
+      <!-- here we will select blood group this is the the label-->
+      <label for="">Select your blood group:</label><br>
+       <!-- here we used inline css in select tag -->
+      <select name="bloodgroup" id="bloodgroup" required style="width:90%; margin-left: 5%; padding: 12px; font-size: 15px;">
+        <!-- we took option and gave the value is group -->
+        <option value="group">select your blood group</option>
+        <!-- group1 shows A+ -->
+        <option value="group1">A+</option>
+        <!-- group2 shows A- -->
+        <option value="group2">A-</option>
+        <!-- group3 shows AB+ -->
+        <option value="group3">AB+</option>
+        <!-- group4 shows AB- -->
+        <option value="group4">AB-</option>
+        <!-- group5 shows O+ -->
+        <option value="group5">O+</option>
+        <!-- group6 shows O- -->
+        <option value="group6">O-</option>
+       </select><br><br>
+      <!--*********SELECT TAG ENDED HERE ********** -->
+
+      <!-- label for addresss -->
+      <label for="">Enter your address:</label><br>
+      <!-- we used inline css for textarea  for user addresses-->
+      <textarea name="" id="address" required cols="70" rows="10"  style="width:90%; margin-left: 5%; padding: 12px; font-size: 15px;"></textarea><br><br>
+
+     <!--********** HERE ADDRESS TEXTAREA ENDED HERE********** -->
+
+      <!-- label for medical health issue -->
+      <label for="">Any other details regarding your medical health:</label><br>
+      <!-- we used here inline css for medical health textarea -->
+      <textarea name="" id="medicalhealth" required cols="70" rows="10"  style="width:90%; margin-left: 5%; padding: 12px; font-size: 15px;"></textarea><br><br>
+
+      <!--************ MEDICAL HEALTH ISSUE TEXTAREA ENDED HERE ***********-->
+     
+      <!-- we took input here and th type is submit -->
+      <input type="Submit" id="button"  onclick = "validate()">
+    </form>
+    <!--************* HERE FORM ENDED **************-->
+  </div>
+  <!--*********** ENDING OF THE CONTAINER************* -->
+</body>
+</html>

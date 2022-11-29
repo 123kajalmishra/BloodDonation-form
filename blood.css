@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+   
+}
+/* whole body css */
+body{
+    background-color: rgb(188, 68, 68);
+}
+.container{
+    width: 50%;
+    background-color: rgb(122, 249, 239);
+    margin-left: 27%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 2px;
+    border-radius: 11px;
+}
+
+/* css for  heading1 */
+h1{
+    margin-bottom: 2%;
+    margin-left: 15px;
+}
+/* we used css for submit button */
+.container #button{
+    padding: 18px;
+    border-radius: 60px;
+    color:#000;
+    width: 40%;
+    margin-left: 29%;
+    font-size: 19px;
+    margin-bottom: 2%;
+}
+
+ /* we used hover for submit button */ 
+
+ .container #button:hover{
+    background-color:blue;
+ }
+
+/* we took here all css span id */
+
+/* css for emailcheck */
+.container #emailcheck{
+    margin-left: 44px;
+}
+/* css for  usererror*/
+.container #usererror{
+    margin-left: 44px;
+}
+/* css for bloodgroupcheck*/
+.container #bloodgroupcheck{
+    margin-left: 44px;
+}
+/* css for  textcheck*/
+.container #textcheck{
+    margin-left: 44px;
+}
+/* css for  medicalhealthcheck*/
+.container #medicalhealthcheck{
+    margin-left: 44px;
+}
+/* css for textareacheck1 */
+.container #textareacheck1{
+    margin-left: 44px;
+}
+
+
+/* css for label */
+.container label{
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+/* css for input area */
+.container input{
+    border-radius: 5px;
+}
+
+.container input:focus{
+    background: rgb(185, 243, 243);
+}
+
+/* css for textarea */
+.container textarea{
+    border-radius: 5px;
+}
+
+.container textarea:focus{
+    background:rgb(185, 243, 243); ;
+}
+/* css for select tag */
+.container select{
+    border-radius: 5px;
+}
+
+.container select:focus{
+    border-radius: 5px;
+}
+
+/* css of container heading */
+.container h1{
+    margin-left: 5%;
+    margin-top: 12px;
+}
+
